@@ -1,0 +1,47 @@
+<!-- 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+
+		<meta charset="ISO-8859-1">
+
+		  -->
+		  <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+
+  <form class="col s12 white" #userRegistrationForm="ngForm" >
+<!-- (ngSubmit)="OnSubmit(userRegistrationForm.value)"> -->
+<head>
+	    <title>User Survey Management | Home</title>
+	    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+	</head>
+	<body>
+		<br><br><br><br>
+		<div class="container text-center">
+			<div class="container text-center">
+				<div>
+					<h4 style="color: blue">Welcome to User Survey Management</h4>
+					<h6>------------------------------------------------------------------------------------------</h6>
+				</div>
+			</div>
+			<br>
+			<div>
+
+				<h6>
+          <li class="nav-item">
+            <a routerLink="/signup" class="nav-link" routerLinkActive="active">New User Registration</a>
+        | 
+        
+          <a routerLink='/login' routerLinkActive='active'>Registered User Login</a>
+        </li>
+        <!-- <a th:href="@{/registration}">New User Registration</a> |
+           <a th:href="@{/login}">Registered User Login</a> -->
+          </h6>
+			</div>
+		</div>
+	</body>
+	</form>

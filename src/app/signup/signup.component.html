@@ -1,0 +1,108 @@
+<!--
+<!DOCTYPE html>
+<form class="col s12 white" #userRegistrationForm="ngForm" 
+(ngSubmit)="OnSubmit(userRegistrationForm)"></form>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+	    <title>User Survey Management | Registration</title>
+	    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css">
+	   	 <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+	   	 <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	   	 <script src="/webjars/popper.js/1.14.3/umd/popper.min.js"></script>		
+		 <script src="/user_lib.js"></script>
+	</head>
+	<body>
+		<br>
+-->
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="/webjars/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+
+  <form class="col s12 white" #userRegistrationForm="ngForm" 
+(ngSubmit)="OnSubmit(userRegistrationForm.value)">
+
+		<div class="container text-center">
+			<div>
+				<h4>New User Registration</h4>
+			</div><br>
+			<div class="container text-center">
+				<div>
+					<h6>------------------------------------------------------------------------------------------</h6>
+				</div>
+			</div>
+				<!--			
+			<form id="formUserRegistration" style="max-width: 600px; margin: 0 auto;"
+			> 
+				   th:object="${user}"  name="register"
+			#registerForm='ngForm' (ngSubmit)='OnSubmit(registerForm.value)'-->
+				<div class="m-3">
+					<div class="form-group row">
+						<label class="col-form-label col-4">First Name</label>
+						<div class="col-6">
+							<input type="text" class="form-control" id="firstName"
+							 placeholder="Enter First Name" required minlength=2 maxlength=20 
+							 name="firstName" ngModel/> 
+							 <!-- th:field="*{firstName}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Last Name</label>
+						<div class="col-6">
+							<input type="text" class="form-control" id="lastName" 
+							placeholder="Enter Last Name" required minlength=2 maxlength=20
+							name="lastName" ngModel/> <!-- th:field="*{lastName}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Email ID</label>
+						<div class="col-6">
+							<input type="email" class="form-control" id="emailId"
+							 placeholder="Enter Email Id" required name="emailId" ngModel/> <!-- th:field="*{emailId}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Mobile No</label>
+						<div class="col-6">
+							<input type="mobile" class="form-control" id="mobile"
+							 placeholder="Enter Mobile No" required name="mobile" ngModel/> <!-- th:field="*{emailId}" -->
+						</div>
+					</div>
+					
+					<div class="form-group row">
+						<label class="col-form-label col-4">Password</label>
+						<div class="col-6">
+							<input type="password" class="form-control" id="password" 
+							placeholder="Enter Password" required name="password" ngModel/> <!-- th:field="*{password}" -->
+						</div>
+					</div>					
+					
+					<div>
+						<button type="submit" class="btn btn-primary">Sign Up</button>
+					</div>
+					
+				</div>
+			
+		
+			<div class="container text-center">
+				<div>
+					<h6>------------------------------------------------------------------------------------------</h6>
+				</div>
+			</div>
+			<div id="divSuccessMsg"></div>			
+			<div id="divRegistrationFailed"></div>
+			<br>
+			<div>
+				<h6>Already Registered! Please 
+          <a routerLink="/login" class="nav-link" routerLinkActive="active">Login</a>
+          <a th:href="@{/login}"> </a></h6>
+			</div>
+		
+		</div>
+	</form>
